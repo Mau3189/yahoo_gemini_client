@@ -11,7 +11,7 @@ module YahooGeminiClient
     private
 
     def build_request_uri
-      REQUEST_URI + job_id_http_parameter + advertiser_id_http_parameter
+      GET_REQUEST_URI + job_id_http_parameter + advertiser_id_http_parameter
     end
 
     def job_id_http_parameter
