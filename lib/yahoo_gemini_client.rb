@@ -1,5 +1,4 @@
 require "active_model"
-require "httparty"
 require 'rest-client'
 require "virtus"
 require "active_support/core_ext/hash/indifferent_access"
