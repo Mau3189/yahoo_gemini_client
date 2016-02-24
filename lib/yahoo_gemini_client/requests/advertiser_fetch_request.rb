@@ -1,11 +1,10 @@
 module YahooGeminiClient
   class AdvertiserFetchRequest < AdvertiserBaseRequest
-
     attribute :advertiser_id, String
 
     def execute
       response = get(request_uri: build_request_uri)
-      AdvertiserResponse.new(response.with_indifferent_access)
+      AdvertiserResponse.new(JSON.parse(response.body).with_indifferent_access)
     end
 
     private

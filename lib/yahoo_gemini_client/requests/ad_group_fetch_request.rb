@@ -5,7 +5,7 @@ module YahooGeminiClient
 
     def execute
       response = get(request_uri: build_request_uri)
-      AdGroupResponse.new(response.with_indifferent_access)
+      AdGroupResponse.new(JSON.parse(response.body).with_indifferent_access)
     end
 
     private

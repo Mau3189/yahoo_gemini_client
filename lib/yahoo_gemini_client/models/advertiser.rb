@@ -1,49 +1,47 @@
 module YahooGeminiClient
   class Advertiser
-
     def initialize(hash)
       @hash = hash
     end
 
     def id
-      @hash["id"]
+      @hash['id']
     end
 
     def advertiser_name
-      @hash["advertiserName"]
+      @hash['advertiserName']
     end
 
     def billing_country
-      @hash["billingCountry"]
+      @hash['billingCountry']
     end
 
     def booking_country
-      @hash["bookingCountry"]
+      @hash['bookingCountry']
     end
 
     def currency
-      @hash["currency"]
+      @hash['currency']
     end
 
     def language
-      @hash["language"]
+      @hash['language']
     end
 
     def managed_by
-      @hash["managedBy"]
+      @hash['managedBy']
     end
 
     def status
-      @hash["status"]
+      @hash['status']
     end
 
     def timezone
-      @hash["timezone"]
+      @hash['timezone']
     end
 
     def type
-      @hash["type"]
+      @hash['type']
     end
-
   end
 end

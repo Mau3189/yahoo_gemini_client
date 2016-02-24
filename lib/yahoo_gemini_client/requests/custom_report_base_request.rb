@@ -11,15 +11,17 @@ module YahooGeminiClient
     protected
 
     def post(opts)
-      HTTParty.post(opts[:request_uri],
-        headers: http_request_header.merge(http_authorization_header),
-        body: request_body.to_json,
+      RestClient.post(
+        opts[:request_uri],
+        request_body.to_json,
+        http_request_header.merge(http_authorization_header)
       )
     end
 
     def get(opts)
-      HTTParty.get(opts[:request_uri],
-        headers: http_request_header.merge(http_authorization_header),
+      RestClient.get(
+        opts[:request_uri],
+        http_request_header.merge(http_authorization_header)
       )
     end
   end
