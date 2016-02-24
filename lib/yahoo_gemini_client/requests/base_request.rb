@@ -1,7 +1,6 @@
 module YahooGeminiClient
   class BaseRequest
-
-    HTTP_REQUEST_HEADER = {"Content-Type" => "application/json"}
+    HTTP_REQUEST_HEADER = { 'Content-Type' => 'application/json' }
 
     include Virtus.model
     attribute :url, String
@@ -20,12 +19,11 @@ module YahooGeminiClient
     private
 
     def default_opts(additional_opts)
-      attributes.slice(:url).merge(action: action_name).
-        merge(additional_opts)
+      attributes.slice(:url).merge(action: action_name).merge(additional_opts)
     end
 
     def action_name
-      self.class.name.demodulize.gsub("Request", "").underscore.to_sym
+      self.class.name.demodulize.gsub('Request', '').underscore.to_sym
     end
 
     protected

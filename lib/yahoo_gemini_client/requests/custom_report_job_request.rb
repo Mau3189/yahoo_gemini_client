@@ -7,7 +7,9 @@ module YahooGeminiClient
         request_uri: POST_REQUEST_URI,
         request_body: request_body.to_json
       )
-      CustomReportResponse.new(response.with_indifferent_access)
+      CustomReportResponse.new(
+        JSON.parse(response.body).with_indifferent_access
+      )
     end
   end
 end
