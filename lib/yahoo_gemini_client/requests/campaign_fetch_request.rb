@@ -1,8 +1,6 @@
 module YahooGeminiClient
   class CampaignFetchRequest < CampaignBaseRequest
-
     attribute :advertiser_id, String
-
     def execute
       response = get(request_uri: build_request_uri)
       CampaignResponse.new(JSON.parse(response.body).with_indifferent_access)
