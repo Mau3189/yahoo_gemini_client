@@ -4,7 +4,7 @@ module YahooGeminiClient
 
     def execute
       response = post(
-        request_uri: POST_REQUEST_URI,
+        request_uri: REQUEST_URI,
         request_body: request_body.to_json
       )
       CustomReportResponse.new(

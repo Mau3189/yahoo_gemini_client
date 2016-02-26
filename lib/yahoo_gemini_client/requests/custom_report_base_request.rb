@@ -1,7 +1,6 @@
 module YahooGeminiClient
   class CustomReportBaseRequest < BaseRequest
-    GET_REQUEST_URI = 'https://api.admanager.yahoo.com/v1/rest/reports/custom'
-    POST_REQUEST_URI = GET_REQUEST_URI + '?reportFormat=json'
+    REQUEST_URI = 'https://api.admanager.yahoo.com/v1/rest/reports/custom'
     include Virtus.model
 
     protected
