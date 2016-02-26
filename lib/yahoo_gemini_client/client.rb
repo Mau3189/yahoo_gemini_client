@@ -30,7 +30,8 @@ module YahooGeminiClient
     end
 
     def encoded_creds
-      Base64.encode64("#{consumer_key}:#{consumer_secret}").gsub(/\n/, '').strip
+      Base64.encode64("#{consumer_key}:#{consumer_secret}")
+            .delete("\n").strip.encode('utf-8')
     end
 
     def get_token(authorization_code)

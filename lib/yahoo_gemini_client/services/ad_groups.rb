@@ -1,6 +1,6 @@
 module YahooGeminiClient
   class AdGroups
-    def initialize(opts={})
+    def initialize(opts = {})
       @client = opts[:client]
     end
 

@@ -13,7 +13,7 @@ module YahooGeminiClient
     validates :url, :client_id, :client_secret, :refresh_key, presence: true
 
     def self.execute(*args)
-      self.new(*args).execute
+      new(*args).execute
     end
 
     private
@@ -31,6 +31,10 @@ module YahooGeminiClient
     def access_token
       @token ||= client.token_refresh!
       @token.token
+    end
+
+    def http_authorization_header
+      { 'Authorization' => "Bearer #{access_token}" }
     end
 
     def http_request_header
