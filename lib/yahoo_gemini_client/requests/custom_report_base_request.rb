@@ -4,10 +4,6 @@ module YahooGeminiClient
     POST_REQUEST_URI = GET_REQUEST_URI + '?reportFormat=json'
     include Virtus.model
 
-    def http_authorization_header
-      { 'Authorization' => "Bearer #{access_token}" }
-    end
-
     protected
 
     def post(opts)

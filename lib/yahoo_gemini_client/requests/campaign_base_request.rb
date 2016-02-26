@@ -3,10 +3,6 @@ module YahooGeminiClient
     REQUEST_URI = 'https://api.admanager.yahoo.com/v1/rest/campaign'
     include Virtus.model
 
-    def http_authorization_header
-      { 'Authorization' => "Bearer #{access_token}" }
-    end
-
     protected
 
     def post
